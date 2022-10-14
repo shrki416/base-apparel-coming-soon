@@ -1,0 +1,163 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    background: url(../images/bg-pattern-desktop.svg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1440px;
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.logo {
+    margin-top: 64.91px;
+    margin-left: 165px;
+    margin-bottom: 136.09px;
+}
+
+.hero-image {
+    width: 610px;
+    height: 800px;
+}
+
+.content {
+    width: 28.8125rem;
+    height: 25.25rem;
+    margin-left: 165px;
+}
+
+.content h1 span {
+    display: block;
+    color: hsla(0, 36%, 70%, 1);
+    font-weight: 300;
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing: 17.3206px;
+    text-transform: uppercase;
+}
+
+.content h1 {
+    color: hsla(0, 7%, 24%, 1);
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 71px;
+    letter-spacing: 17.3206px;
+    text-transform: uppercase;
+}
+
+.content p {
+    margin: 2rem 0 2.5rem 0;
+    width: 27.75rem;
+    color: hsla(0, 36%, 70%, 1);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+/* input {
+    width: 27.75rem;
+    height: 3.5rem;
+    padding-left: 2rem;
+    border-radius: 1.75rem;
+    border: 1px solid hsla(0, 36%, 70%, 1);
+}
+
+input::placeholder {
+    color: hsla(0, 36%, 70%, 0.5);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    mix-blend-mode: normal;
+    font-family: 'Josefin Sans', sans-serif;
+} */
+
+form {
+    position: relative;
+    transform: translateX(-100%);
+    animation: comeinleft 0.5s ease forwards;
+}
+
+input {
+    background-color: transparent;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 15px 30px;
+    height: 55px;
+    width: 100%;
+}
+
+input:focus {
+    border-width: 2px;
+    box-shadow: 0px 0px 10px hsla(0, 36%, 70%, 0.5);
+    outline: none;
+}
+
+input::placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+form.error input {
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+button {
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: opacity 0.2s ease;
+    height: 55px;
+    width: 100px;
+}
+
+button:hover {
+    opacity: 0.6;
+}
+
+.error-icon {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 110px;
+}
+
+form.error .error-icon {
+    display: block;
+}
+
+small {
+    color: hsl(0, 93%, 68%);
+    display: none;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+form.error small {
+    display: block;
+} 
+
+@keyframes comeinleft {
+    to {
+        transform: translateX(0);
+    }
+}
