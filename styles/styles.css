@@ -7,14 +7,19 @@
 body {
     font-size: 16px;
     font-family: 'Josefin Sans', sans-serif;
-    background: url(../images/bg-pattern-desktop.svg);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* main {
+    transform: translateX(-100%);
+    animation: comeinleft 0.5s ease forwards;
+} */
+
 .container {
+    background: url(../images/bg-pattern-desktop.svg);
     width: 1440px;
     height: 800px;
     display: flex;
